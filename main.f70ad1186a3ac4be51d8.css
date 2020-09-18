@@ -1,0 +1,672 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+/**
+ * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications.
+ */
+
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+
+button {
+  background-color: transparent;
+  background-image: none;
+}
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+/**
+ * Tailwind custom reset styles
+ */
+
+/**
+ * 1. Use the user's configured `sans` font-family (with Tailwind's default
+ *    sans-serif font stack as a fallback) as a sane default.
+ * 2. Use Tailwind's default "normal" line-height so the user isn't forced
+ *    to override it to ensure consistency even when using the default theme.
+ */
+
+/**
+ * 1. Prevent padding and border from affecting element width.
+ *
+ *    We used to set this in the html element and inherit from
+ *    the parent element for everything else. This caused issues
+ *    in shadow-dom-enhanced elements like <details> where the content
+ *    is wrapped by a div with box-sizing set to `content-box`.
+ *
+ *    https://github.com/mozdevs/cssremedy/issues/4
+ *
+ *
+ * 2. Allow adding a border to an element by just adding a border-width.
+ *
+ *    By default, the way the browser specifies that an element should have no
+ *    border is by setting it's border-style to `none` in the user-agent
+ *    stylesheet.
+ *
+ *    In order to easily add borders to elements by just setting the `border-width`
+ *    property, we change the default border-style for all elements to `solid`, and
+ *    use border-width to hide them instead. This way our `border` utilities only
+ *    need to set the `border-width` property instead of the entire `border`
+ *    shorthand, making our border utilities much more straightforward to compose.
+ *
+ *    https://github.com/tailwindcss/tailwindcss/pull/116
+ */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e2e8f0;
+  /* 2 */
+}
+
+/*
+ * Ensure horizontal rules are visible by default
+ */
+
+/**
+ * Undo the `border-style: none` reset that Normalize applies to images so that
+ * our `border-{width}` utilities have the expected effect.
+ *
+ * The Normalize reset is unnecessary for us since we default the border-width
+ * to 0 on all elements.
+ *
+ * https://github.com/tailwindcss/tailwindcss/issues/362
+ */
+
+input:-ms-input-placeholder {
+  color: #a0aec0;
+}
+
+input::-ms-input-placeholder {
+  color: #a0aec0;
+}
+
+input::placeholder {
+  color: #a0aec0;
+}
+
+button {
+  cursor: pointer;
+}
+
+/**
+ * Reset links to optimize for opt-in styling instead of
+ * opt-out.
+ */
+
+/**
+ * Reset form element properties that are easy to forget to
+ * style explicitly so you don't inadvertently introduce
+ * styles that deviate from your design system. These styles
+ * supplement a partial reset that is already applied by
+ * normalize.css.
+ */
+
+button,
+input {
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+}
+
+/**
+ * Use the configured 'mono' font family for elements that
+ * are expected to be rendered with a monospace font, falling
+ * back to the system monospace stack if there is no configured
+ * 'mono' font family.
+ */
+
+/**
+ * Make replaced elements `display: block` by default as that's
+ * the behavior you want almost all of the time. Inspired by
+ * CSS Remedy, with `svg` added as well.
+ *
+ * https://github.com/mozdevs/cssremedy/issues/14
+ */
+
+/**
+ * Constrain images and videos to the parent width and preserve
+ * their instrinsic aspect ratio.
+ *
+ * https://github.com/mozdevs/cssremedy/issues/14
+ */
+
+._1nyF3yygy29G_ICYWZjB7k {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  ._1nyF3yygy29G_ICYWZjB7k {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  ._1nyF3yygy29G_ICYWZjB7k {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  ._1nyF3yygy29G_ICYWZjB7k {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  ._1nyF3yygy29G_ICYWZjB7k {
+    max-width: 1280px;
+  }
+}
+
+._1F8Sxs7CKWtyGoQVAWbj8b {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.jXYGXCeyB9REozlAiWQzg {
+  background-color: transparent;
+}
+
+.eLrz3x7BRFUKsFA9B25ik {
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+}
+
+.ADzk__c-QypTSCupYOG12 {
+  --bg-opacity: 1;
+  background-color: #f7fafc;
+  background-color: rgba(247, 250, 252, var(--bg-opacity));
+}
+
+._6kOkv3Kbg7tKwiMvdvaJl {
+  --bg-opacity: 1;
+  background-color: #edf2f7;
+  background-color: rgba(237, 242, 247, var(--bg-opacity));
+}
+
+.FPAsjI66H6MoEBDuFgCt:hover {
+  --bg-opacity: 1;
+  background-color: #ebf8ff;
+  background-color: rgba(235, 248, 255, var(--bg-opacity));
+}
+
+._3Ta2zm98dmiLy2LJi6LBYG:focus {
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+}
+
+._1vDe4VY8LXG0qq5FX5mh-R:focus {
+  --bg-opacity: 1;
+  background-color: #ebf8ff;
+  background-color: rgba(235, 248, 255, var(--bg-opacity));
+}
+
+.tAnSTNQri0-8HnzTWMfnZ {
+  border-color: transparent;
+}
+
+._1N1Wmb-SVBOJRggo6RK8B3 {
+  --border-opacity: 1;
+  border-color: #90cdf4;
+  border-color: rgba(144, 205, 244, var(--border-opacity));
+}
+
+._21z6mmzQWHjMEvNcTrMIqT:hover {
+  --border-opacity: 1;
+  border-color: #63b3ed;
+  border-color: rgba(99, 179, 237, var(--border-opacity));
+}
+
+.cN7v8upQM_trzK32C54qe:focus {
+  --border-opacity: 1;
+  border-color: #e2e8f0;
+  border-color: rgba(226, 232, 240, var(--border-opacity));
+}
+
+._1pOynSp0k4Q9ozF70UQcGT {
+  border-radius: 0.25rem;
+}
+
+._1gKuZ0MicIA0o305FIQ6ld {
+  border-radius: 0.5rem;
+}
+
+._2TNARzbW3-XnPituumyitH {
+  border-width: 1px;
+}
+
+._2KucVQxkXSkrTXAQ5FjhL4 {
+  display: block;
+}
+
+._1zN-5RRwTpZY_dA1jLU78Y {
+  display: flex;
+}
+
+._2CL_AQSYR56ZVA6HoO5Ux {
+  align-items: center;
+}
+
+._18Rh4LhRQRGDXaMqagb78L {
+  flex-grow: 1;
+}
+
+.KSEWmUJp7vPx3qaFCjhzz {
+  font-weight: 600;
+}
+
+._1jgzrE7fW5-rd6Y_Bc3933 {
+  height: 4rem;
+}
+
+._29ES60TLwYy9Jr2DjLeZ0T {
+  font-size: 0.875rem;
+}
+
+._1um8Vrd3zej5xVGOiCOPZ7 {
+  line-height: 1.5;
+}
+
+._2uZn_23E2SZkIzzCksPVoG {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+._9XfTZAS_MC5b76shxLT2v {
+  margin-right: 0.75rem;
+}
+
+.A-TGzVVUbIHpqzQbfqU-P {
+  margin-left: 1rem;
+}
+
+._3Rclv2C2kAJiBM5IWSvgJQ {
+  margin-bottom: 1.25rem;
+}
+
+._12YrihM4fXoVqZI1HBIObP {
+  max-width: 1280px;
+}
+
+._1Ee1tHe8dLMP-buID3K8M3 {
+  min-width: 0;
+}
+
+._1KHe6cQp_2AsH3XJkA8d_X:focus {
+  outline: 0;
+}
+
+._2od5w5-UjLtgpeGzL2J2Oi {
+  padding: 0.25rem;
+}
+
+._2VWElidabLSPMgWtQiocMN {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+._14tU5-O18O1uf4Ux1pAbEn {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+._27Ihzc3Knhy6zMmwRMxPk6 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+._3QmAdy3d6wDKsjKUcHYS_i {
+  padding-right: 1rem;
+}
+
+.dTyswxfR7vlWvk7_gYNgG {
+  padding-left: 2.5rem;
+}
+
+.KVu4Z5sV6h1vKBlZIxXSB {
+  position: fixed;
+}
+
+._1UJSlzd90I2QZqeR6Eouj2 {
+  position: relative;
+}
+
+._3RUItmLPbHz24_L3v4uGz7 {
+  right: 0;
+  left: 0;
+}
+
+._24zAlpz_webIzYeFEovYAS {
+  top: 0;
+}
+
+.UJFqrCYo5Xj8jTY_LJXBn {
+  text-align: left;
+}
+
+.iHUYZWm0wOYSvdW6wyy8L {
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+}
+
+._1DWllm-KNn_fR7NqSmKqLm {
+  --text-opacity: 1;
+  color: #2d3748;
+  color: rgba(45, 55, 72, var(--text-opacity));
+}
+
+._1cq1tRuVq7L_s0I7TrnNRQ {
+  --text-opacity: 1;
+  color: #2b6cb0;
+  color: rgba(43, 108, 176, var(--text-opacity));
+}
+
+._2lqL9WlTyIU_sfY0_DDvhv {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+._2I_xzLxMswfBcPazrLcAaY {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+._2MzGe7K0BBRQ-S2s2zMw11 {
+  width: 100%;
+}
+
+._15U2Lb3HksF4CmYyS9FovE {
+  z-index: 50;
+}
+
+._3-1qhkx9hO_uEJjNbELJp9 {
+  transition-property: background-color, border-color, color, fill, stroke;
+}
+
+._3_p_jx024zLaJYKNZXcDMX {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+._1ZgZIIQSndQJkuLE3Z9672 {
+  transition-duration: 100ms;
+}
+
+@keyframes _34sbrrLaBvOtopevAXxbjR {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes _2R4sCOBY3oUzu43QTBBqiN {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes _2MxHkvd-pJUn5eNkmS9cHr {
+  50% {
+    opacity: .5;
+  }
+}
+
+@keyframes _1yJrh3BB6ow3a9-0ui9jxr {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@media (min-width: 1024px) {
+
+  ._1uCDq3y77Rn9KZxDcWpLlz {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1280px) {
+
+  ._1FYivDS8U9nyqLys-Xa--q {
+    width: 80%;
+  }
+}
