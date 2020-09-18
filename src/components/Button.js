@@ -1,6 +1,6 @@
 import { createElement as e } from 'react';
 import classNames from 'classnames';
-import t from '../../assets/tailwind.css';
+import t from '../../assets/tailwind.module.css';
 
 const btn = classNames(
   t.ml_4,

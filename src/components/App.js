@@ -1,5 +1,5 @@
 import { createElement as e } from 'react';
-import t from '../../assets/tailwind.css';
+import t from '../../assets/tailwind.module.css';
 import classNames from 'classnames';
 import { useStore } from '../../lib/components/StoreLayer';
 import { useController } from '../../lib/components/ControllerLayer';
