@@ -20,15 +20,19 @@ const postCssPurge = {
   }
 };
 
-module.exports = {
+module.exports = (env, argv) => ({
   output: {
     filename: '[name].[contenthash].js'
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.js(x)?$/,
         loader: require.resolve('babel-loader')
+      },
+      {
+        test: /\.svg$/,
+        loader: require.resolve('svg-inline-loader')
       },
       {
         test: /\.css$/,
@@ -37,9 +41,8 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: {esModule: true}
           },
-          require.resolve('css-loader'),
-          postCssPurge
-        ]
+          require.resolve('css-loader')
+        ].concat(argv.mode === 'production' ? postCssPurge : [])
       }
     ]
   },
@@ -51,4 +54,4 @@ module.exports = {
       template: require.resolve('./index.html')
     })
   ]
-};
+});
