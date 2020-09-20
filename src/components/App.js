@@ -17,23 +17,25 @@ export function App() {
 function AppBody() {
   const [issues] = useStore((state) => state.issues);
   return e('div', {className: classNames(t.items_center, t.py_20)},
-    issues?.map((issue) => {
-      return e('div', {
-          key: issue.idReadable,
-          className: classNames(t.py_2, t.mb_5)
-        },
-        e('span',
-          {className: classNames(t.mr_3, t.text_sm, t.text_gray_800, t.bg_gray_100, t.p_1, t.rounded)},
-          issue.idReadable),
-        e('span', {
-            className: classNames(t.text_blue_700)
+    e('div', {className: classNames(t.break_words, t.overflow_x_hidden)},
+      issues?.map((issue) => {
+        return e('div', {
+            key: issue.idReadable,
+            className: classNames(t.py_2, t.mb_5)
           },
-          issue.summary
-        ),
-        e('div', {className: classNames(t.text_sm, t.text_gray_700, t.p_1)},
-          issue.trimmedDescription)
-      );
-    })
+          e('span',
+            {className: classNames(t.mr_3, t.text_sm, t.text_gray_800, t.bg_gray_100, t.p_1, t.rounded)},
+            issue.idReadable),
+          e('span', {
+              className: classNames(t.text_blue_700)
+            },
+            issue.summary
+          ),
+          e('div', {className: classNames(t.text_sm, t.text_gray_700, t.p_1)},
+            issue.trimmedDescription)
+        );
+      })
+    )
   );
 }
 
