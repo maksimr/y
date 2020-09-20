@@ -5,8 +5,10 @@ import { useStore } from '../../lib/components/StoreLayer';
 import { useController } from '../../lib/components/ControllerLayer';
 import SearchIcon from 'heroicons/react/outline/Search.jsx';
 
+const containerCss = classNames(t.container, t.mx_auto, t.px_2);
+
 export function App() {
-  return e('div', {className: classNames(t.container, t.mx_auto)},
+  return e('div', {className: classNames(containerCss)},
     e(AppHeader),
     e(AppBody)
   );
@@ -40,9 +42,9 @@ function AppHeader() {
 
   return e('header', {
       className: classNames(
+        containerCss,
         t.flex, t.bg_white,
         t.fixed, t.top_0,
-        t.container, t.mx_auto,
         t.inset_x_0, t.z_50, t.h_16, t.items_center
       )
     },
