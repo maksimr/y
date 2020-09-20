@@ -42,7 +42,7 @@ function AppHeader() {
       className: classNames(
         t.flex, t.bg_white,
         t.fixed, t.top_0,
-        t.border, t.border_gray_100,
+        t.container, t.mx_auto,
         t.inset_x_0, t.z_50, t.h_16, t.items_center
       )
     },
