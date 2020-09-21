@@ -41,7 +41,14 @@ module.exports = (env, argv) => ({
             loader: MiniCssExtractPlugin.loader,
             options: {esModule: true}
           },
-          require.resolve('css-loader')
+          {
+            loader: require.resolve('css-loader'),
+            options: {
+              modules: {
+                localIdentName: '[local]--[hash:base64:5]'
+              }
+            }
+          }
         ].concat(argv.mode === 'production' ? postCssPurge : [])
       }
     ]
