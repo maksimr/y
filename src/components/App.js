@@ -56,7 +56,7 @@ function AppHeader() {
         t.transition_colors, t.duration_100, t.ease_in_out,
         t.py_2, t.pr_4, t.pl_12, t.block, t.w_full,
         t.appearance_none, t.leading_normal, t.border, t.border_transparent,
-        t.rounded_lg, t.focus_outline_none, t.text_left, t.select_none, t.truncate,
+        t.rounded_lg, t.focus_outline_none, t.text_left, t.truncate,
         t.focus_bg_white, t.focus_border_gray_300, t.bg_gray_200
       )
     })
