@@ -9,12 +9,12 @@ const containerCss = classNames(t.container, t.mx_auto, t.px_2);
 
 export function App() {
   return e('div', {className: classNames(containerCss)},
-    e(AppHeader),
-    e(AppBody)
+    e(Header),
+    e(IssuesList)
   );
 }
 
-function AppBody() {
+function IssuesList() {
   const [issues] = useStore((state) => state.issues);
   return e('div', {className: classNames(t.items_center, t.py_20)},
     e('div', {className: classNames(t.break_words, t.overflow_x_hidden)},
@@ -39,10 +39,23 @@ function AppBody() {
   );
 }
 
-function AppHeader() {
+function Header() {
+  return e('header', {
+      className: classNames(
+        containerCss,
+        t.flex, t.bg_white,
+        t.fixed, t.top_0,
+        t.inset_x_0, t.z_50, t.h_16, t.items_center
+      )
+    },
+    e(Search)
+  );
+}
+
+function Search() {
   const ctrl = useController();
 
-  const searchPanel = e('div', {className: classNames(t.w_full, t.relative)},
+  return e('div', {className: classNames(t.w_full, t.relative)},
     e('div', {className: classNames(t.absolute, t.inset_y_0, t.pl_4, t.left_0, t.flex, t.items_center)},
       e(SearchIcon, {className: classNames(t.w_5, t.text_gray_600)})
     ),
@@ -60,16 +73,5 @@ function AppHeader() {
         t.focus_bg_white, t.focus_border_gray_300, t.bg_gray_200
       )
     })
-  );
-
-  return e('header', {
-      className: classNames(
-        containerCss,
-        t.flex, t.bg_white,
-        t.fixed, t.top_0,
-        t.inset_x_0, t.z_50, t.h_16, t.items_center
-      )
-    },
-    searchPanel
   );
 }
