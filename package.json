@@ -6,7 +6,7 @@
     "start": "webpack-dev-server -d",
     "build": "webpack -p",
     "test": "jest --passWithNoTests",
-    "lint": "eslint src/"
+    "lint": "eslint ./"
   },
   "dependencies": {
     "classnames": "2.2.6",
@@ -45,11 +45,16 @@
       "browser": true,
       "node": true
     },
+    "globals": {
+      "describe": true,
+      "it": true,
+      "expect": true
+    },
     "rules": {
-      "no-undef": "warn",
-      "no-unused-vars": "warn",
+      "no-undef": "error",
+      "no-unused-vars": "error",
       "valid-jsdoc": [
-        "warn",
+        "error",
         {
           "requireReturn": false,
           "requireParamDescription": false,
