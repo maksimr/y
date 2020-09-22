@@ -52,6 +52,7 @@
       "node": true
     },
     "globals": {
+      "Promise": true,
       "describe": true,
       "it": true,
       "expect": true

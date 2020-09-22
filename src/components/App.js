@@ -15,9 +15,20 @@ export function App() {
 }
 
 function IssuesList() {
-  const [issues] = useStore((state) => state.issues);
+  const [state] = useStore((state) => state);
+  const issues = state.issues;
+  const issuesError = state.issuesError;
+
   return e('div', {className: classNames(t.items_center, t.py_20)},
-    e('div', {className: classNames(t.break_words, t.overflow_x_hidden)},
+    issuesError ? renderError() : renderIssues()
+  );
+
+  function renderError() {
+    return e('pre', null, issuesError.error_description);
+  }
+
+  function renderIssues() {
+    return e('div', {className: classNames(t.break_words, t.overflow_x_hidden)},
       issues?.map((issue) => {
         return e('div', {
             key: issue.idReadable,
@@ -35,8 +46,8 @@ function IssuesList() {
             issue.trimmedDescription)
         );
       })
-    )
-  );
+    );
+  }
 }
 
 function Header() {

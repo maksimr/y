@@ -11,12 +11,20 @@ function main() {
     search(q = '') {
       const fields = Query.fields(['idReadable', 'summary', 'trimmedDescription']);
       fetch(`https://youtrack.jetbrains.com/api/issues?$top=100&fields=${fields}&query=${q}`)
-        .then((res) => res.json())
+        .then((res) => {
+          return res.status > 199 && res.status < 300 ? res.json() : res.json().then((error) => Promise.reject(error));
+        })
         .then((issues) => {
-          store.swap((state) => {
-            state.issues = issues;
-          });
+          ctrl.updateIssues(issues);
+        }, (error) => {
+          ctrl.updateIssues([], error);
         });
+    },
+    updateIssues(issues, error = null) {
+      store.swap((state) => {
+        state.issues = issues;
+        state.issuesError = error;
+      });
     }
   };
 
