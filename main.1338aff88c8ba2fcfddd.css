@@ -41,6 +41,13 @@ main {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
 /* Text-level semantics
    ========================================================================== */
 
@@ -222,6 +229,11 @@ summary {
  * Removes the default spacing and border for appropriate elements.
  */
 
+
+pre {
+  margin: 0;
+}
+
 button {
   background-color: transparent;
   background-image: none;
@@ -343,6 +355,10 @@ input {
  * back to the system monospace stack if there is no configured
  * 'mono' font family.
  */
+
+pre {
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
 
 /**
  * Make replaced elements `display: block` by default as that's
