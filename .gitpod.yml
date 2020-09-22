@@ -1,3 +1,2 @@
 ports:
   - port: 8080
-    onOpen: open-browser
