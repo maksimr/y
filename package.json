@@ -31,7 +31,7 @@
     "jest": "26.5.3",
     "jest-cli": "26.5.3",
     "svg-inline-loader": "0.8.2",
-    "css-loader": "4.3.0",
+    "css-loader": "5.0.0",
     "html-webpack-plugin": "4.5.0",
     "mini-css-extract-plugin": "1.0.0",
     "@fullhuman/postcss-purgecss": "3.0.0",
