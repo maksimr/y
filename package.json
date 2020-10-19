@@ -33,7 +33,7 @@
     "svg-inline-loader": "0.8.2",
     "css-loader": "5.0.0",
     "html-webpack-plugin": "4.5.0",
-    "mini-css-extract-plugin": "1.0.0",
+    "mini-css-extract-plugin": "1.1.0",
     "@fullhuman/postcss-purgecss": "3.0.0",
     "postcss-loader": "4.0.4",
     "webpack": "5.1.3",
