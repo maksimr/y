@@ -36,7 +36,7 @@ module.exports = (env, argv) => ({
       },
       {
         test: /\.css$/,
-        loader: [
+        use: [
           {
             loader: MiniCssExtractPlugin.loader,
             options: {esModule: true}
